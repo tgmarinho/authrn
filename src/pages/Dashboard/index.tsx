@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  text: {
+    fontSize: 24,
+  },
 });
 
 const Dashboard: React.FC = () => {
@@ -19,7 +22,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text>{user?.name}</Text>
+      <Text style={styles.text}>{user?.name}</Text>
       <Button title="Sign Out" onPress={handleSignOut} />
     </View>
   );
